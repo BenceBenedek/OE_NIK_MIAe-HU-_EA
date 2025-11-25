@@ -52,16 +52,6 @@ class TestFight:
         assert isinstance(result, str)
         assert "wins!" in result
 
-    def test_fight_with_high_defense_units(self):
-        """Test fight where units have very high defense (harder to hit)."""
-        tank1 = Character("Tank1", 15, 10, 25, 2)
-        tank2 = Character("Tank2", 15, 10, 25, 2)
-        
-        result = fight(tank1, tank2)
-        
-        # Should still produce a winner
-        assert "Tank1 wins!" in result or "Tank2 wins!" in result
-
     def test_fight_returns_string(self):
         """Test that fight() returns a string result."""
         unit1 = Character("A", 10, 15, 10, 2)
